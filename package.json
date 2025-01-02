@@ -11,10 +11,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.15.11",
-    "@supabase/supabase-js": "^2.39.8",
-    "@astrojs/tailwind": "^5.1.0",
     "@astrojs/node": "^8.2.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@supabase/supabase-js": "^2.39.8",
+    "astro": "^4.15.11",
     "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@astrojs/netlify": "^5.5.4"
   }
 }
