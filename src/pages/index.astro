@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Quiz - Pergunta 1">
+  <main class="min-h-screen bg-gray-100 p-4">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mt-10">
+      <img 
+        src="http://dermatosaude.com.br/wp-content/uploads/2016/02/produto-cosmetico-capa-1.jpg" 
+        alt="Questão 1" 
+        class="w-full h-48 object-cover rounded-lg mb-4"
+      />
+      
+      <h2 class="text-xl font-bold mb-4">Qual é a capital do Brasil?</h2>
+      
+      <form action="/dados" method="get" class="space-y-4">
+        <div class="space-y-2">
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="resposta1" value="rio" class="form-radio" required>
+            <span>Rio de Janeiro</span>
+          </label>
+          
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="resposta1" value="brasilia" class="form-radio">
+            <span>Brasília</span>
+          </label>
+          
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="resposta1" value="saopaulo" class="form-radio">
+            <span>São Paulo</span>
+          </label>
+        </div>
+        
+        <button 
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Próxima Pergunta
+        </button>
+      </form>
+    </div>
+  </main>
+</Layout>

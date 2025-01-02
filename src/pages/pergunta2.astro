@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Quiz - Pergunta 2">
+  <main class="min-h-screen bg-gray-100 p-4">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mt-10">
+      <img 
+        src="http://dermatosaude.com.br/wp-content/uploads/2016/02/produto-cosmetico-capa-1.jpg" 
+        alt="Questão 2" 
+        class="w-full h-48 object-cover rounded-lg mb-4"
+      />
+      
+      <h2 class="text-xl font-bold mb-4">Qual é o maior planeta do sistema solar?</h2>
+      
+      <form action="/pergunta3" method="get" class="space-y-4">
+        <input type="hidden" name="resposta1" value={Astro.url.searchParams.get('resposta1')}>
+        <input type="hidden" name="nome" value={Astro.url.searchParams.get('nome')}>
+        <input type="hidden" name="whatsapp" value={Astro.url.searchParams.get('whatsapp')}>
+        <input type="hidden" name="email" value={Astro.url.searchParams.get('email')}>
+        
+        <div class="space-y-2">
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="resposta2" value="marte" class="form-radio" required>
+            <span>Marte</span>
+          </label>
+          
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="resposta2" value="jupiter" class="form-radio">
+            <span>Júpiter</span>
+          </label>
+          
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="resposta2" value="saturno" class="form-radio">
+            <span>Saturno</span>
+          </label>
+        </div>
+        
+        <button 
+          type="submit"
+          class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Próxima Pergunta
+        </button>
+      </form>
+    </div>
+  </main>
+</Layout>
